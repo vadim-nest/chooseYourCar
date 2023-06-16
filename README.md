@@ -13,9 +13,11 @@ bashCopy code
 ## Usage
 
 Run the application:
-`cd choose-your-car`
-`npm install`
-`npm start`
+```
+cd choose-your-car
+npm install
+npm start
+```
 
 The application is then accessible at [http://localhost:3000](http://localhost:3000/) in your browser.
 
