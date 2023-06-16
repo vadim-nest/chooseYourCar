@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function SelectBox({ currentKey, options, onSelectChange, next }) {
+export default function SelectBox({
+  currentKey,
+  options,
+  onSelectChange,
+  next,
+}) {
   const [selected, setSelected] = useState(options[0].value);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    onSelectChange(selected);
+  }, [selected]);
 
   function handleChange(event) {
     setSelected(event.target.value);
@@ -12,12 +21,11 @@ export default function SelectBox({ currentKey, options, onSelectChange, next })
   console.log(options);
 
   function handleNext() {
-    console.log('Next clicked');
-    navigate(`/${next}`); // This will always navigate to '/colour'. You may want to make this dynamic.
+    navigate(`/${next}`);
   }
 
   return (
-    <div className="select-box-window">
+    <div className='select-box-window'>
       <h1>{currentKey.toUpperCase()}</h1>
       <select value={selected} onChange={handleChange}>
         {options.map((option, index) => (
@@ -26,8 +34,8 @@ export default function SelectBox({ currentKey, options, onSelectChange, next })
           </option>
         ))}
       </select>
-      <button className="button-next" type="button" onClick={handleNext}>
-          NEXT
+      <button className='button-next' type='button' onClick={handleNext}>
+        NEXT
       </button>
     </div>
   );
