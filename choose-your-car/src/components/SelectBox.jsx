@@ -18,7 +18,6 @@ export default function SelectBox({
     setSelected(event.target.value);
     onSelectChange(event.target.value);
   }
-  console.log(options);
 
   function handleNext() {
     navigate(`/${next}`);

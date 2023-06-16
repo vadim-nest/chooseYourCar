@@ -13,7 +13,7 @@ export default function Checkout({ make, colour, code }) {
       <p>
         I have a {make} and the colour is {colour}.
       </p>
-      {isRed && <p>THE CAR IS RED! NICE!!</p>}
+      {isRed && <p className='red-text'>THE CAR IS RED! NICE!!</p>}
       <p>REF: {code}</p>
     </div>
   );
