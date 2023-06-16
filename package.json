@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "react-router-dom": "^6.13.0"
-  }
+  "name": "car-selection-app",
+  "version": "1.0.0",
+  "description": "A simple React application for selecting a car make and colour, and inputting a reference code.",
+  "main": "index.js",
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "react",
+    "car",
+    "selection",
+    "app"
+  ],
+  "author": "Vadim Gnezdyshkin",
+  "license": "MIT"
 }
