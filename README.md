@@ -5,9 +5,6 @@ This application allows users to select a car make and colour, input a reference
 ## Installation
 
 Clone the repository:
-
-bashCopy code
-
 `git clone https://github.com/vadim-nest/chooseYourCar.git`
 
 ## Usage
